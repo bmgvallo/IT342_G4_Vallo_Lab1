@@ -21,7 +21,6 @@ const Registration = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // validation
     if (!username || !firstName || !lastName || !email || !phoneNumber || !password || !confirmPassword) {
       showMessage('Please fill in all fields', 'error');
       return;
@@ -72,7 +71,6 @@ const Registration = () => {
       
       showMessage('Registration successful! Please login.', 'success');
 
-      // clear form
       setUsername('');
       setFirstName('');
       setLastName('');
@@ -81,7 +79,6 @@ const Registration = () => {
       setPassword('');
       setConfirmPassword('');
 
-      // redirect to login page
       setTimeout(() => {
         navigate('/');
       }, 2000);
